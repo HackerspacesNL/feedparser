@@ -1,0 +1,26 @@
+{
+  "name": "hackerspacesNL feedparser",
+  "version": "1.0.0",
+  "description": "",
+  "main": "parse.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HackerspacesNL/feedparser.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/HackerspacesNL/feedparser/issues"
+  },
+  "homepage": "https://github.com/HackerspacesNL/feedparser#readme",
+  "dependencies": {
+    "dateformat": "^3.0.2",
+    "feedparser": "^2.2.8",
+    "fs": "0.0.1-security",
+    "request": "^2.83.0",
+    "turndown": "^4.0.1"
+  }
+}
