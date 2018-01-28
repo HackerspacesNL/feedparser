@@ -43,7 +43,6 @@ function parseFeed(name, url) {
       let content = turndownService.turndown(item.description);
       let date = Date.parse(item.pubDate);
       let dateTz = dateFormat(date, "o");
-      console.log(dateTz);
       dateTz = dateTz.slice(0,dateTz.length-2)+":"+dateTz.slice(dateTz.length-2, 
 dateTz.length);
       let formattedDate = dateFormat(date, "yyyy-mm-dd'T'HH:mm:ss")+dateTz;
@@ -57,3 +56,8 @@ dateTz.length);
 
 parseFeed('Tkkrlab', 'https://tkkrlab.nl/wordpress/feed');
 parseFeed('Hack42','https://hack42.nl/blog/feed');
+parseFeed('TDvenlo', 'http://tdvenlo.nl/?feed=rss2');
+parseFeed('Pixelbar', 'https://www.pixelbar.nl/atom.xml');
+parseFeed('Squatters linux user group', 'https://slug.squat.net/feed');
+parseFeed('Frack', 'https://frack.nl/feed');
+parseFeed('Bhack', 'http://bhack.nl/feed');
