@@ -1,5 +1,5 @@
 {
-  "name": "hackerspacesNL feedparser",
+  "name": "hackerspacesNL-feedparser",
   "version": "1.0.0",
   "description": "",
   "main": "parse.js",
