@@ -39,7 +39,7 @@ function parseFeed(name, url) {
 
   while (item = stream.read()) {
       let filename = item.title.replace(/[^a-zA-Z0-9]/g, "").toLowerCase();
-      let title = "\""+item.title.replace(/[^a-zA-Z0-9 ]/g, "")+"\"";
+      let title = "\""+name+": "+item.title.replace(/[^a-zA-Z0-9 ]/g, "")+"\"";
       let content = turndownService.turndown(item.description);
       let date = Date.parse(item.pubDate);
       let dateTz = dateFormat(date, "o");
@@ -49,10 +49,11 @@ dateTz.length);
       let formattedDate = dateFormat(date, "yyyy-mm-dd'T'HH:mm:ss")+dateTz;
       console.log('Got article (%s) [%s]: %s', filename, formattedDate, item.title);
       let header = "---\ntitle: "+title+"\ndate: "+formattedDate+"\n---\n";
-      fs.writeFile("output/"+name+"-"+filename+".md", header+content, function(err) {});
+	  let readmore = "\n\n[Lees meer bij "+name+"&raquo;]("+item.link+")";
+      fs.writeFile("output/"+name.toLowerCase()+"-"+filename+".md", header+content+readmore, function(err) {});
   }
   });
 }
 
-parseFeed('tkkrlab', 'https://tkkrlab.nl/wordpress/feed');
-parseFeed('hack42','https://hack42.nl/blog/feed');
+parseFeed('Tkkrlab', 'https://tkkrlab.nl/wordpress/feed');
+parseFeed('Hack42','https://hack42.nl/blog/feed');
