@@ -17,10 +17,11 @@
   },
   "homepage": "https://github.com/HackerspacesNL/feedparser#readme",
   "dependencies": {
-    "dateformat": "^3.0.2",
-    "feedparser": "^2.2.8",
+    "dateformat": "^3.0.3",
+    "feedparser": "^2.2.9",
     "fs": "0.0.1-security",
-    "request": "^2.83.0",
+    "hoek": "^5.0.3",
+    "request": "^2.85.0",
     "turndown": "^4.0.1"
   }
 }
